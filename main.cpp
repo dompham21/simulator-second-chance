@@ -1,5 +1,5 @@
 /* 
-graphics in Dev-C++ - nguyenvanquan7826 
+graphics in Dev-C++  
 */
 #include <bits/stdc++.h>
 #include <iostream>
@@ -248,11 +248,38 @@ void SecondChance(vector<int> t, int frames)
 
 			// Queue is filled up to capacity
 			else {
+				
+				if(second_chance[0] == 0) {
+					setcolor(1);
+					settextstyle(10,0,3);
+					outtextxy(15 + (i-1)*65, 605 + 5,itegerToChar(q.front()));
+					char res[20] = "";
+					strcat(res,"(");
+					strcat(res,itegerToChar(second_chance[0]));
+					strcat(res,")");
+			
+					outtextxy(15 + (i-1)*65 + 14, 605 + 5,res);
+					setcolor(0);
+				}
 				if(checkBitRef(second_chance)) {
+					
+					setcolor(1);
+					settextstyle(10,0,3);
+					outtextxy(15 + (i-1)*65, 605 + 5,itegerToChar(q.front()));
+					char res[20] = "";
+					strcat(res,"(");
+					strcat(res,itegerToChar(second_chance[0]));
+					strcat(res,")");
+			
+					outtextxy(15 + (i-1)*65 + 14, 605 + 5,res);
+					setcolor(0);
+					
 					for(int i=0;i<frames;i++ ) {
 						second_chance[i] = false;
 					}
+				
 				}
+			
 				
 				settextstyle(10,0,5);
 				setbkcolor(15);
@@ -373,9 +400,11 @@ int main(int argc, char *argv[])
 
 
 	/*=====================*/
-	
+
 	outtextxy(300,50,"THUAT TOAN CO HOI THU HAI");
-	
+	settextstyle(10,0,3);
+
+	outtextxy(400, 100, "N19DCCN019 - Pham Dung Bac");
 	int arr[] = { 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0 ,1 };
 	int n = sizeof(arr) / sizeof(arr[0]);
 	
